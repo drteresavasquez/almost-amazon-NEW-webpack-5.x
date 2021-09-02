@@ -10,7 +10,7 @@ const navBar = () => {
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item active">
               <a class="nav-link" href="#" id="all-books">
-                All Books <span class="sr-only">(current)</span>
+                All Books
               </a>
             </li>
             <li class="nav-item">

@@ -1,5 +1,5 @@
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 import loginButton from '../components/buttons/loginButton';
 import startApp from '../views/startApp';
 import firebaseConfig from '../../api/apiKeys';
