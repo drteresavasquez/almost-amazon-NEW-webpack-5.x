@@ -12,10 +12,10 @@ const getBooks = (userId) => new Promise((resolve, reject) => {
 });
 
 // DELETE BOOK
-const deleteBook = (firebaseKey) => new Promise((resolve, reject) => {
+const deleteBook = (firebaseKey, userId) => new Promise((resolve, reject) => {
   axios.delete(`${dbUrl}/books/${firebaseKey}.json`)
     .then(() => {
-      getBooks().then(resolve);
+      getBooks(userId).then(resolve);
     })
     .catch(reject);
 });
@@ -34,7 +34,7 @@ const createBook = (bookObj) => new Promise((resolve, reject) => {
       const body = { firebaseKey: response.data.name };
       axios.patch(`${dbUrl}/books/${response.data.name}.json`, body)
         .then(() => {
-          getBooks().then(resolve);
+          getBooks(bookObj.uid).then(resolve);
         });
     }).catch((error) => reject(error));
 });
@@ -42,7 +42,7 @@ const createBook = (bookObj) => new Promise((resolve, reject) => {
 // UPDATE BOOK
 const updateBook = (bookObj) => new Promise((resolve, reject) => {
   axios.patch(`${dbUrl}/books/${bookObj.firebaseKey}.json`, bookObj)
-    .then(() => getBooks().then(resolve))
+    .then(() => getBooks(bookObj.uid).then(resolve))
     .catch(reject);
 });
 
