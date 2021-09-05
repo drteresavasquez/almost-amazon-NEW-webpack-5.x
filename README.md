@@ -3,7 +3,7 @@ We are building an admin app that allows a store owner to login to the app and m
 
 [OPEN Deployed Sample](https://almost-amazon-sample.netlify.app/) (PLEASE DO NOT DELETE my books ;-))
 
-[User Restricted Deplyed Sample](https://github.com/nss-evening-cohort-16/webpack-template#deploying-on-netlify)
+[User Restricted Deplyed Sample](https://almost-amazon-webpack5.netlify.app/#)
 
 ![Screen Shot](./aass.png)
 
