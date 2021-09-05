@@ -99,6 +99,7 @@ const domEvents = (uid) => {
         email: document.querySelector('#email').value,
         first_name: document.querySelector('#first_name').value,
         last_name: document.querySelector('#last_name').value,
+        uid
       };
 
       createAuthor(authorObject).then(showAuthors);
